@@ -13,8 +13,5 @@ angular.module('isbHa2App', [
     'ngCookies',
     'ngResource',
     'ngRoute',
-    'ngSanitize',
-    'firebase',
-    'firebase.ref',
-    'firebase.auth'
+    'ngSanitize'
   ]);
