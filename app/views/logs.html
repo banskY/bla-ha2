@@ -1,2 +1,14 @@
-<h2>Logs</h2>
-
+<section ng-controller="DblogsCtrl" ng-init="init()" id="db-logs">
+	<form role="form">
+		<p class="form-group">
+			<label for="LogType" class="col-md-2">Type</label>
+			<input id="LogType" required name="LogType" type="text" ng-model="type" class="col-md-6" />
+			<div class="col-md-2">
+				<button  class="btn btn-primary" ng-click="submit(type)">filter</button>
+			</div>
+		</p>
+	</form>
+	<p ng-show="err" class="bg-danger">{{err}}</p>
+	{{ init }}
+	{{ rate | json }}
+</section>

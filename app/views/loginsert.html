@@ -1,0 +1,22 @@
+<section ng-controller="DbinsertCtrl" ng-init="init()" id="db-insert">
+	<form role="form">
+		<p class="form-group">
+			<label for="LogType">Log type</label>
+			<select required name="type" id="LogType" ng-model="type">
+				<option value="">Please choose...</option>
+				<option value="info">info</option>
+				<option value="warning">warning</option>
+				<option value="error">error</option>
+				<option value="fatal_error">fatal_error</option>
+			</select>
+		</p>
+		<p class="form-group">
+			<label for="LogMsg">Log message</label>
+			<input id="LogMsg" required name="msg" type="text" ng-model="msg" class="form-control" />
+		</p>
+		<p>
+			<button  class="btn btn-primary" ng-click="submit(type, msg)">Submit</button>
+		</p>
+	</form>
+	<p ng-show="err" class="bg-danger">{{err}}</p>
+</section>
