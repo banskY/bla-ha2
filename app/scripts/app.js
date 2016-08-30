@@ -13,5 +13,7 @@ angular.module('isbHa2App', [
     'ngCookies',
     'ngResource',
     'ngRoute',
-    'ngSanitize'
-  ]);
+    'ngSanitize',
+	'angularMoment'
+  ])
+;

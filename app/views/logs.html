@@ -9,6 +9,13 @@
 		</p>
 	</form>
 	<p ng-show="err" class="bg-danger">{{err}}</p>
-	{{ init }}
-	{{ rate | json }}
+	<table>
+		<tr ng-repeat="item in data">
+			<td> {{item.type}}</td>
+			<td> {{item.msg}}</td>
+			<td> {{item.time | amDateFormat:'DD.MM.YYYY HH:mm'}}</td>
+		</tr>
+	</table>
+	{{ data }}
+	{{ data | json }}
 </section>

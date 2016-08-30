@@ -54,7 +54,7 @@ angular.module('isbHa2App')
       })
       .when('/login', {
         templateUrl: 'views/login.html',
-        controller: 'LoginCtrl'
+        controller: 'LoginCtrl',
       })
  /*     .when('/account', {
         templateUrl: '/views/account.html',

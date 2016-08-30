@@ -15,8 +15,11 @@ angular.module('isbHa2App')
 		DBInserts.list()
 			.then(function(list){
 				_.each(list, function(value, key, index){
-					$scope.data[index] = value;
-					console.log($scope.data[index]);
+					$scope.data.push(
+						_.extend(value, {id: key})
+					);
+					//$scope.data[index] = value;
+					//console.log($scope.data);
 				});
 				//$scope.data = indexedData;
 				console.log($scope.data);
